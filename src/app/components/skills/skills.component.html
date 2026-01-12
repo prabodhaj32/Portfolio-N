@@ -1,1 +1,29 @@
-<p>skills works!</p>
+<section class="relative py-20 bg-section-gradient text-white overflow-hidden">
+  <!-- Background Floating Circles -->
+  <div class="absolute inset-0">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+    <div class="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse" style="animation-delay: 0.5s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+      <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+        🚀 My Skills
+      </span>
+    </h2>
+    <p class="text-xl text-slate-300 mb-16 max-w-3xl mx-auto">
+      Technologies and tools I work with to bring ideas to life
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div *ngFor="let skill of skills"
+           class="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 shadow-lg hover:shadow-2xl cursor-pointer">
+        <div class="text-center">
+          <div class="text-2xl mb-2">{{ skill.icon }}</div>
+          <span class="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors duration-300">{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

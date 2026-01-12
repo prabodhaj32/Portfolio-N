@@ -1,0 +1,114 @@
+/* Section */
+.about-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #4f46e5);
+  color: white;
+  overflow: hidden;
+}
+
+/* Floating Circles */
+.background-circles .circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5rem);
+  opacity: 0.1;
+  animation: pulse 4s infinite alternate;
+}
+.circle1 { top: 2.5rem; left: 2.5rem; width: 18rem; height: 18rem; background-color: #3b82f6; }
+.circle2 { bottom: 2.5rem; right: 2.5rem; width: 24rem; height: 24rem; background-color: #6366f1; animation-delay: 1s; }
+.circle3 { top: 50%; right: 25%; width: 20rem; height: 20rem; background-color: #a78bfa; animation-delay: 0.5s; }
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.05; }
+  100% { transform: scale(1.1); opacity: 0.15; }
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.section-title .underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, #3b82f6, #a78bfa);
+  margin: 0.5rem auto 0;
+  border-radius: 0.125rem;
+}
+
+/* Content Layout */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .about-content { flex-direction: row; }
+}
+
+/* Left Text */
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #e5e7eb;
+}
+
+/* Right Cards */
+.about-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Icon */
+.card .icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to top right, #3b82f6, #6366f1);
+  font-size: 1.5rem;
+}
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}

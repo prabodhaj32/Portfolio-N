@@ -1,0 +1,46 @@
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Circles (similar to hero section) */
+.background-elements .circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5rem);
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+.circle1 { top: -5rem; left: 10rem; width: 20rem; height: 20rem; background-color: #6366f1; }
+.circle2 { bottom: 5rem; right: 10rem; width: 24rem; height: 24rem; background-color: #8b5cf6; animation-delay: 1s; }
+.circle3 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18rem; height: 18rem; background-color: #4f46e5; animation-delay: 0.5s; }
+
+/* Gradient Text for title */
+.gradient-text {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Floating Animation */
+@keyframes float { 
+  0%,100% { transform: translateY(0) } 
+  50% { transform: translateY(-20px) } 
+}
+@keyframes gradient-shift { 
+  0%,100% { background-position: 0% 50% } 
+  50% { background-position: 100% 50% } 
+}
+
+/* Skill Card Hover Effects */
+.skill-card {
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  border-color: rgba(255,255,255,0.2);
+}

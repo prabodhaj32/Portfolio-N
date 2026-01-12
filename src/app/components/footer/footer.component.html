@@ -1,1 +1,53 @@
-<p>footer works!</p>
+<footer class="relative bg-section-gradient text-white overflow-hidden">
+  <!-- Background Floating Circles -->
+  <div class="absolute inset-0">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+    <div class="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Left Section -->
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          Prabodha Jayawardhana
+        </h3>
+        <p class="text-slate-300">Software Engineer | Web Developer</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex justify-center gap-8">
+        <a href="#home" class="text-slate-300 hover:text-blue-300 transition-colors duration-300">Home</a>
+        <a href="#about" class="text-slate-300 hover:text-blue-300 transition-colors duration-300">About</a>
+        <a href="#projects" class="text-slate-300 hover:text-blue-300 transition-colors duration-300">Projects</a>
+        <a href="#contact" class="text-slate-300 hover:text-blue-300 transition-colors duration-300">Contact</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex justify-center md:justify-end gap-4">
+        <a href="mailto:prabodharg1954@gmail.com" 
+           class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-110"
+           title="Email">
+          📧
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" 
+           class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-110"
+           title="LinkedIn">
+          💼
+        </a>
+        <a href="https://github.com" target="_blank" 
+           class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-110"
+           title="GitHub">
+          🐙
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-white/20 mt-8 pt-8 text-center">
+      <p class="text-slate-300">
+        &copy; {{ currentYear }} Prabodha Jayawardhana. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>

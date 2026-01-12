@@ -1,0 +1,86 @@
+.education-section {
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #a5f3fc;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: white;
+  top: 0;
+  bottom: 0;
+}
+
+.edu-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.edu-item.left {
+  flex-direction: row;
+}
+
+.edu-item.right {
+  flex-direction: row-reverse;
+}
+
+.edu-content {
+  width: 50%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(6px);
+  text-align: left;
+}
+
+.edu-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.institution {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.spacer {
+  width: 50%;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  z-index: 10;
+}
