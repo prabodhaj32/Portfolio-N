@@ -25,33 +25,33 @@ export class ProjectsComponent {
       technologies: ['React', 'Node.js', 'MongoDB', 'Express']
     },
     {
-      title: 'E-commerce Site',
-      description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
+      title: 'Movie-Explorer Site',
+      description: 'Movie-Explorer is a modern web application that allows users to search, explore, and discover movies from various categories. It is built using React, Vite, and integrates with TMDb (The Movie Database) API to provide real-time movie data. The application is designed to be fast, responsive, and user-friendly, making it a complete solution for movie enthusiasts.',
       image: 'assets/project3.png',
-      link: 'https://example.com/ecommerce',
+      link: 'https://movie-explorer-ruby-three.vercel.app/',
       technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
     },
-     {
-      title: 'E-commerce Site',
-      description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
-      image: 'assets/project4.png',
-      link: 'https://example.com/ecommerce',
-      technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
-    },
-     {
-      title: 'E-commerce Site',
-      description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
-      image:'assets/project2.png',
-      link: 'https://example.com/ecommerce',
-      technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
-    },
-     {
-      title: 'E-commerce Site',
-      description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
-      image: 'assets/project4.png',
-      link: 'https://example.com/ecommerce',
-      technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
-    }
+    //  {
+    //   title: 'E-commerce Site',
+    //   description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
+    //   image: 'assets/project4.png',
+    //   link: 'https://example.com/ecommerce',
+    //   technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
+    // },
+    //  {
+    //   title: 'E-commerce Site',
+    //   description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
+    //   image:'assets/project2.png',
+    //   link: 'https://example.com/ecommerce',
+    //   technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
+    // },
+    //  {
+    //   title: 'E-commerce Site',
+    //   description: 'A responsive e-commerce platform with payment integration, inventory management, and admin dashboard.',
+    //   image: 'assets/project4.png',
+    //   link: 'https://example.com/ecommerce',
+    //   technologies: ['React', 'Node.js', 'MySQL', 'Stripe']
+    // }
     
   ];
 
