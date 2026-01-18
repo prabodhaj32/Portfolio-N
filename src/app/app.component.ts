@@ -8,10 +8,11 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EducationComponent } from "./components/education/education.component";
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, AboutComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent, EducationComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, AboutComponent, SkillsComponent, ProjectsComponent, EducationComponent, ExperienceComponent, ContactComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
