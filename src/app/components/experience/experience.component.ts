@@ -12,7 +12,7 @@ export class ExperienceComponent {
   experiences = [
     {
       // id: 1,
-      title: 'Senior Frontend Developer',
+      title: 'Full-Stack Developer',
       company: 'Tech Solutions Inc.',
       duration: 'Jan 2023 - Present',
       author: 'Portfolio Author',

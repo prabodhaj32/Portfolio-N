@@ -43,12 +43,216 @@
               {{ tech }}
             </span>
           </div>
-          <button (click)="openProject(project.link)"
-                  class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-            View Project →
-          </button>
+         <button
+  (click)="openProjectPopup(project)"
+  class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+  View Project →
+</button>
+
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+   <!-- Enhanced Project Popup Modal -->
+<div *ngIf="selectedProject"
+     class="fixed inset-0 z-50 flex items-center justify-center p-4"
+     [ngClass]="{'animate-fadeIn': selectedProject}">
+
+  <!-- Backdrop with gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-black/10 via-blue-900/10 to-black/10 backdrop-blur-xl"></div>
+  
+  <!-- Animated background particles -->
+  <div class="absolute inset-0">
+    <div class="absolute top-20 left-20 w-32 h-32 bg-blue-500 rounded-full filter blur-2xl opacity-30 animate-pulse"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-2xl opacity-30 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-pink-500 rounded-full filter blur-2xl opacity-30 animate-pulse" style="animation-delay: 0.5s;"></div>
+  </div>
+
+  <!-- Scrollable Modal Container -->
+  <div (click)="$event.stopPropagation()"
+       class="relative bg-gradient-to-br from-slate-900/95 to-blue-900/20 backdrop-blur-2xl max-w-5xl w-full mx-4 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition-all duration-500 scale-100 hover:scale-[1.02] max-h-[90vh] flex flex-col">
+
+    <!-- Modal Header with Image (Fixed) -->
+    <div class="relative h-80 flex-shrink-0 overflow-hidden">
+      <img [src]="selectedProject.coverImage"
+           [alt]="selectedProject.title"
+           class="w-full h-full object-cover transform scale-105 transition-transform duration-700">
+      
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+      
+      <!-- Floating Project Title -->
+      <div class="absolute bottom-0 left-0 right-0 p-8">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-4">
+              <span class="text-2xl">🚀</span>
+              <span class="text-sm font-medium text-blue-300">Featured Project</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">
+              {{ selectedProject.title }}
+            </h2>
+            <p class="text-gray-300 text-lg max-w-2xl">
+              {{ selectedProject.summary }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced Close Button -->
+      <button (click)="closePopup()"
+              class="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:border-white/30 hover:scale-110 transition-all duration-300 group">
+        <svg class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Modal Body -->
+    <div class="flex-1 overflow-y-auto p-8 text-white scrollbar-hide">
+      
+      <!-- Project Description Section -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+            <span class="text-xl">📝</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Project Overview</h3>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <p class="text-gray-300 leading-relaxed text-lg">
+            {{ selectedProject.description }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Enhanced Project Gallery -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-xl">🖼️</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Project Gallery</h3>
+        </div>
+        
+        <!-- Main Project Image with Enhanced Design -->
+        <div class="relative group mb-4">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+          <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
+            <img [src]="selectedProject.image" 
+                 [alt]="selectedProject.title"
+                 class="w-full h-64 object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700">
+            
+            <!-- Image Overlay with Actions -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-sm hover:bg-white/30 transition-colors">
+                    <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    View Fullscreen
+                  </button>
+                </div>
+                <div class="flex gap-2">
+                  <button class="w-8 h-8 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thumbnail Gallery -->
+        <div class="grid grid-cols-4 gap-3">
+          <div *ngFor="let img of selectedProject.images; let i = index; let isLast = last" 
+               class="relative group cursor-pointer">
+            <div class="aspect-video bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden"
+                 *ngIf="i < 3">
+              <img [src]="img" 
+                   [alt]="'Thumbnail ' + (i + 1) + ' - ' + selectedProject.title"
+                   class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-300">
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center"
+                 *ngIf="i >= 3">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <span class="text-xs text-white/60">+{{ selectedProject.images.length - 3 }} more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Features Section -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <span class="text-xl">✨</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Key Features</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div *ngFor="let feature of selectedProject.features" 
+               class="flex items-start gap-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+            <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300">{{ feature }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technologies Section -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <span class="text-xl">🛠</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Technologies Used</h3>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span *ngFor="let tech of selectedProject.technologies"
+                class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full border border-blue-400/30 hover:border-blue-400/60 hover:bg-blue-500/30 transition-all duration-300 text-sm font-medium">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Enhanced Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a [href]="selectedProject.github" target="_blank"
+           class="group flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-800 text-white font-semibold rounded-2xl hover:from-gray-600 hover:to-gray-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>View Repository</span>
+        </a>
+
+        <a [href]="selectedProject.live" target="_blank"
+           class="group flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/25">
+          <span>Live Demo</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
