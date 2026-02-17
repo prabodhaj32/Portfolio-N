@@ -117,10 +117,10 @@ export class ProjectsComponent {
     ],
 
     image: 'assets/movie/p1.png',
-    coverImage: 'assets/movie/p1s.png',
+    coverImage: 'assets/movie/p5.png',
 
-    github: 'https://github.com/your-repo/movie-explorer',
-    live: 'https://movie-explorer-ruby-three.vercel.app/',
+    github: 'https://github.com/prabodhaj32/IMAGIX-CINEMA',
+    live: 'https://imagix-cinema-chi.vercel.app/',
 
     technologies: [
       'React',

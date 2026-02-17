@@ -175,7 +175,7 @@
           <div *ngFor="let img of selectedProject.images; let i = index; let isLast = last" 
                class="relative group cursor-pointer">
             <div class="aspect-video bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden"
-                 *ngIf="i < 3">
+                 *ngIf="i < 4">
               <img [src]="img" 
                    [alt]="'Thumbnail ' + (i + 1) + ' - ' + selectedProject.title"
                    class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-300">
@@ -185,7 +185,7 @@
                 </svg>
               </div>
             </div>
-            <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center"
+            <!-- <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center"
                  *ngIf="i >= 3">
               <div class="text-center">
                 <svg class="w-8 h-8 mx-auto mb-1 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,7 +193,7 @@
                 </svg>
                 <span class="text-xs text-white/60">+{{ selectedProject.images.length - 3 }} more</span>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

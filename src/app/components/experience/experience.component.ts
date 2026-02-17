@@ -11,16 +11,31 @@ import { NgFor } from '@angular/common';
 export class ExperienceComponent {
   experiences = [
     {
-      // id: 1,
-      title: 'Full-Stack Developer',
-      company: 'Tech Solutions Inc.',
-      duration: 'Jan 2023 - Present',
-      author: 'Portfolio Author',
-      type: 'fulltime',
-      description: 'Leading frontend development initiatives, architecting scalable React applications, and mentoring junior developers. Implemented micro-frontend architecture that improved team productivity by 60%.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'GraphQL'],
-      achievements: ['Improved performance by 40%', 'Led team of 5 developers', 'Reduced bundle size by 30%']
-    },
+  title: 'Full-Stack Developer',
+  company: 'Spendview ApS (Remote)',
+  duration: 'June 2025 - December 2025',
+  author: '',
+  type: 'fulltime',
+  description: 'Working as a Full-Stack Developer at Spendview ApS (Denmark – Remote), developing scalable and responsive web applications using React, Angular, and ASP.NET Core. Built secure RESTful APIs with JWT-based authentication, integrated third-party Weather APIs for real-time agricultural insights, and optimized CRUD operations with MySQL. Collaborated with cross-functional teams using Git-based workflows and leveraged AI development tools to enhance productivity and code quality.',
+  technologies: [
+    'React.js',
+    'Angular',
+    'ASP.NET Core',
+    'JavaScript',
+    'JWT Authentication',
+    'Tailwind CSS',
+    'REST APIs',
+    'MySQL'
+  ],
+  achievements: [
+    'Developed secure JWT-based authentication system',
+    'Integrated real-time Weather API for agricultural features',
+    'Optimized database queries and CRUD operations',
+    'Improved application performance through debugging and testing',
+    'Accelerated development using AI-assisted coding tools'
+  ]
+}
+
     // {
     //   id: 2,
     //   title: 'Frontend Developer',
