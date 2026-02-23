@@ -17,10 +17,10 @@ export class SkillsComponent {
     { name: 'TailwindCSS', icon: '🎨' },
     { name: 'MongoDB', icon: '🍃' },
     { name: 'MySQL', icon: '🐬' },
-    { name: 'HTML5', icon: '🌐' },
+    { name: 'Postman', icon: '📮' },
     { name: 'CSS3', icon: '💎' },
     { name: 'Git', icon: '📚' },
-    { name: 'Docker', icon: '🐳' },
+    { name: 'Bitbucket', icon: '🪣' },
     
   ];
 }

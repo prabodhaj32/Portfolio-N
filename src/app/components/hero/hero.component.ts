@@ -18,7 +18,7 @@ export class HeroComponent {
   }
 
   downloadCV() {
-    window.open('assets/Prabodha_CV.pdf', '_blank');
+    window.open('assets/R.G.Prabodha Jayawardhana-Software Engineering-CV.pdf', '_blank');
   }
 
   
