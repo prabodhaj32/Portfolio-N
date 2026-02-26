@@ -11,12 +11,12 @@ import { NgFor } from '@angular/common';
 export class ExperienceComponent {
   experiences = [
     {
-  title: 'Full-Stack Developer',
+  title: 'Intern Full-Stack Developer',
   company: 'Spendview ApS (Remote)',
   duration: 'June 2025 - December 2025',
   author: '',
   type: 'fulltime',
-  description: 'Working as a Full-Stack Developer at Spendview ApS (Denmark – Remote), developing scalable and responsive web applications using React, Angular, and ASP.NET Core. Built secure RESTful APIs with JWT-based authentication, integrated third-party Weather APIs for real-time agricultural insights, and optimized CRUD operations with MySQL. Collaborated with cross-functional teams using Git-based workflows and leveraged AI development tools to enhance productivity and code quality.',
+  description: 'Working as a Intern Full-Stack Developer at Spendview ApS (Denmark – Remote), developing scalable and responsive web applications using React, Angular, and ASP.NET Core. Built secure RESTful APIs with JWT-based authentication, integrated third-party Weather APIs for real-time agricultural insights, and optimized CRUD operations with MySQL. Collaborated with cross-functional teams using Git-based workflows and leveraged AI development tools to enhance productivity and code quality.',
   technologies: [
     'React.js',
     'Angular',
