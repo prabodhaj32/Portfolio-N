@@ -14,13 +14,19 @@ export class SkillsComponent {
     { name: 'Node.js', icon: '🟢' },
     { name: 'TypeScript', icon: '🔷' },
     { name: 'JavaScript', icon: '🟨' },
+     { name: 'Python', icon: '🐍' },
+    { name: 'Odoo', icon: '🧩' },
     { name: 'TailwindCSS', icon: '🎨' },
     { name: 'MongoDB', icon: '🍃' },
     { name: 'MySQL', icon: '🐬' },
     { name: 'Postman', icon: '📮' },
     { name: 'CSS3', icon: '💎' },
     { name: 'Git', icon: '📚' },
-    { name: 'Bitbucket', icon: '🪣' },
+    { name: 'Bitbucket', icon: '🪣' },  
+  { name: 'PostgreSQL', icon: '🐘' },
+  { name: 'OWL (Odoo Web Library)', icon: '🦉' },
+  { name: 'REST APIs', icon: '🔗' },
+  { name: 'RPC', icon: '⚙️' }
     
   ];
 }

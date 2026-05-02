@@ -5,16 +5,23 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-education',
-  imports: [FormsModule,CommonModule,RouterOutlet],
+  imports: [FormsModule, CommonModule, RouterOutlet],
   templateUrl: './education.component.html',
-  styleUrl: './education.component.css'
+  styleUrl: './education.component.css',
 })
 export class EducationComponent {
   educationData = [
     {
+      title: 'BSc (Hons) Computer Science with Software Engineering',
+      institution: 'Coventry University (via NIBM)',
+      duration: '2026 - Present',
+      location: 'Colombo, Sri Lanka',
+      side: 'right',
+    },
+    {
       title: 'Higher Diploma in Software Engineering',
       institution: 'National Institute of Business Management (NIBM)',
-      duration: '2023 - Present',
+      duration: '2023 - 2024',
       location: 'Kandy, Sri Lanka',
       side: 'left',
     },
@@ -46,6 +53,5 @@ export class EducationComponent {
       location: 'Gampola, Sri Lanka',
       side: 'left',
     },
-    
   ];
 }

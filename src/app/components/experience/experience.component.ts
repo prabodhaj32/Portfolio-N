@@ -34,7 +34,35 @@ export class ExperienceComponent {
     'Improved application performance through debugging and testing',
     'Accelerated development using AI-assisted coding tools'
   ]
-}
+} ,
+ {
+    title: 'Freelance Software Engineer',
+    company: 'Tringledo (Pvt) Ltd',
+    duration: 'March 2026 - Present',
+    author: '',
+    type: 'freelance',
+    description:
+      'Working as a Freelance Software Engineer at Tringledo (Pvt) Ltd, specializing in Odoo-based Point of Sale (POS) system development. Designed and customized Odoo modules using Python and JavaScript, integrating PostgreSQL for efficient data management. Developed and migrated POS frontend systems from localStorage to backend APIs, implemented real-time inventory and sales tracking, and ensured seamless communication between frontend and Odoo backend using RPC/REST APIs. Focused on scalable architecture, performance optimization, and maintaining clean, modular code.',
+    technologies: [
+      'Odoo',
+      'Python',
+      'JavaScript',
+      'PostgreSQL',
+      'OWL (Odoo Web Library)',
+      'REST APIs',
+      'RPC',
+      'HTML',
+      'CSS'
+    ],
+    achievements: [
+      'Developed and customized Odoo POS system with inventory and billing features',
+      'Migrated frontend data handling from localStorage to PostgreSQL via Odoo backend APIs',
+      'Implemented real-time data synchronization between POS UI and backend',
+      'Optimized database queries and improved system performance',
+      'Built modular and reusable Odoo components using OWL framework'
+    ]
+  }
+  
 
     // {
     //   id: 2,
